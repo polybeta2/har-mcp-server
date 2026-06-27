@@ -1,0 +1,22 @@
+# HAR MCP Server 依赖
+# Python >= 3.10
+
+# 官方 MCP Python SDK
+mcp>=1.0.0
+
+# 流式 JSON 解析，处理大体积 HAR 文件的核心依赖
+ijson>=3.3.0
+
+# ── 可选：脱敏模块依赖 ──────────────────────────────────
+# 以下库为可选依赖，用于 sanitizer.py 的中文/多语言敏感词过滤。
+# 若未安装，sanitizer 仅依赖 wordlist.txt 自定义词库。
+# 任选其一安装即可（按推荐顺序）：
+
+# 中文敏感词过滤（推荐，词库由安全团队维护）
+#cn-profanity-filter>=0.1.0
+
+# 英文为主，可扩展自定义词库
+ better-profanity>=0.7.0
+
+# 多语言敏感词检测
+ alt-profanity-check>=1.0.0

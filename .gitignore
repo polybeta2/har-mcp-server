@@ -1,0 +1,30 @@
+# 自定义敏感词库（由用户自行维护，不应提交到版本控制）
+wordlist.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# MCP 配置中的本地路径（含敏感信息时）
+mcp.local.json
+
+# 日志
+*.log

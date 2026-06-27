@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "har-analyzer": {
+      "command": "uv",
+      "args": ["run", "--project", "/path/to/har_mcp", "python", "server.py"],
+      "env": {}
+    }
+  }
+}

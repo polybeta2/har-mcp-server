@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "har-analyzer": {
+      "command": "python",
+      "args": ["/path/to/har_mcp/server.py"],
+      "env": {
+        "PYTHONPATH": "/path/to/har_mcp"
+      }
+    }
+  }
+}
