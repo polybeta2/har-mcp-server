@@ -1,6 +1,9 @@
 # 自定义敏感词库（由用户自行维护，不应提交到版本控制）
 wordlist.txt
 
+# 第三方敏感词库（git clone 获取，不应提交到版本控制）
+Sensitive-lexicon/
+
 # Python
 __pycache__/
 *.py[cod]

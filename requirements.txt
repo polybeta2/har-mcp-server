@@ -8,15 +8,12 @@ mcp>=1.0.0
 ijson>=3.3.0
 
 # ── 可选：脱敏模块依赖 ──────────────────────────────────
-# 以下库为可选依赖，用于 sanitizer.py 的中文/多语言敏感词过滤。
-# 若未安装，sanitizer 仅依赖 wordlist.txt 自定义词库。
-# 任选其一安装即可（按推荐顺序）：
-
-# 中文敏感词过滤（推荐，词库由安全团队维护）
-#cn-profanity-filter>=0.1.0
-
-# 英文为主，可扩展自定义词库
- better-profanity>=0.7.0
-
-# 多语言敏感词检测
- alt-profanity-check>=1.0.0
+# sanitizer.py 支持多种脱敏源，按优先级自动选择：
+# 1. Sensitive-lexicon + Aho-Corasick（推荐，需额外 git clone 词库）
+# 2. better-profanity（英文敏感词过滤，备选）
+# 3. alt-profanity-check（多语言敏感词检测，备选）
+# 4. 本地 wordlist.txt 自定义词库（兜底）
+# 若全部未安装，sanitizer 自动降级为空操作，不影响主流程。
+pyahocorasick>=2.0.0
+better-profanity>=0.7.0
+alt-profanity-check>=1.0.0
